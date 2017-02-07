@@ -51,7 +51,11 @@ Revision History:
 #endif
 
 #ifdef USE_INTRINSICS
+#ifdef _MSC_VER
+#include <intrin.h>
+#else
 #include <emmintrin.h>
+#endif
 #endif
 
 hwf_manager::hwf_manager() :
